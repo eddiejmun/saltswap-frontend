@@ -11,7 +11,7 @@ const Menu = (props) => {
   const { account, connect, reset } = useWallet()
   const { selectedLanguage, setSelectedLanguage } = useContext(LanguageContext)
   const { isDark, toggleTheme } = useTheme()
-  const cakePriceUsd = usePriceCakeBusd()
+  const cakePriceUsd = "15"
   const { profile } = useProfile()
 
   return (
@@ -24,7 +24,7 @@ const Menu = (props) => {
       currentLang={selectedLanguage && selectedLanguage.code}
       langs={allLanguages}
       setLang={setSelectedLanguage}
-      //cakePriceUsd={cakePriceUsd.toNumber()}
+      cakePriceUsd={cakePriceUsd.toNumber()}
       links={config}
       profile={{
         username: profile?.username,
